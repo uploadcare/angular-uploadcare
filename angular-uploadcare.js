@@ -29,6 +29,9 @@ angular.module('ng-uploadcare', [])
           $scope.onUploadComplete({info: info});
         });
         $scope.widget.onChange(function(file) {
+          $scope.$apply(function () {
+            $parse($attrs.ngModel).assign($scope.$parent, $element.val());
+          });
           $scope.onChange({file: file});
         })
       }]
