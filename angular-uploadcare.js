@@ -2,9 +2,9 @@
 
 /**
  * @ngdoc directive
- * @name angular-uploadcare.directive:UploadCare
+ * @name angular-uploadcare.directive:Uploadcare
  * @description Provides a directive for the Uploadcare widget.
- * # UploadCare
+ * # Uploadcare
  */
 angular.module('ng-uploadcare', [])
   .directive('uploadcareWidget', function () {
@@ -29,6 +29,7 @@ angular.module('ng-uploadcare', [])
           $scope.onUploadComplete({info: info});
         });
         $scope.widget.onChange(function(file) {
+          // add data binding for hidden inputs
           $scope.$apply(function () {
             $parse($attrs.ngModel).assign($scope.$parent, $element.val());
           });
