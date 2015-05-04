@@ -18,7 +18,7 @@ Combine this with the power of Angular and you've got yourself an image uploadin
 
 * Run `bower install angular-uploadcare` (or manually download/clone and install into your project's directory)
 * Include bower_components/angular-uploadcare/angular-uploadcare.js
-* Include the desired version of the [Uploadcare Widget](https://uploadcare.com/documentation/widget/). This directive works with at least version 1.3.1 `<script charset="utf-8" src="https://ucarecdn.com/widget/1.3.1/uploadcare/uploadcare-1.3.1.min.js"></script>`
+* Include the desired version of the [Uploadcare Widget](https://uploadcare.com/documentation/widget/). This directive works with at least version 2.1.2 `<script charset="utf-8" src="https://ucarecdn.com/widget/2.1.2/uploadcare/uploadcare-2.1.2.min.js"></script>`
 * Add `ng-uploadcare` as a dependency for your app
 * Insert the `uploadcare-widget` directive into your template file:
 ```
