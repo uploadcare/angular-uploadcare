@@ -9,20 +9,19 @@
 angular.module('ng-uploadcare', [])
   .directive('uploadcareWidget', function () {
     return {
-      restrict: 'E',
-      replace: true,
+      restrict: 'A',
       require: 'ngModel',
-      template: '<input type="hidden" role="ng-uploadcare-uploader" />',
       scope: {
         onWidgetReady: '&',
         onUploadComplete: '&',
         onChange: '&',
       },
-      controller: ['$scope', '$element', '$log', function($scope, $element, $log) {
+      controller: ['$scope', '$element', '$attrs', '$parse', '$log', function($scope, $element, $attrs, $parse, $log) {
         if(!uploadcare) {
           $log.error('Uploadcare script has not been loaded!.');
           return;
         }
+        $element.attr('type', 'hidden');
         $scope.widget = uploadcare.Widget($element);
         $scope.onWidgetReady({widget: $scope.widget});
         $scope.widget.onUploadComplete(function(info) {
