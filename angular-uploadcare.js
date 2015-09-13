@@ -28,16 +28,16 @@ angular.module('ng-uploadcare', [])
         $scope.widget.onUploadComplete(function(info) {
           $scope.onUploadComplete({info: info});
         });
-        $scope.widget.onChange(function(fileOrGroup) {
+        $scope.widget.onChange(function(data) {
           // add data binding for hidden inputs
-          if (fileOrGroup) {
-            fileOrGroup.promise().done(function(info) {
+          if (data) {
+            data.promise().done(function(info) {
               $scope.$apply(function () {
                 $scope.ngModel = $element.val()
               });
             });
           }
-          $scope.onChange({file: fileOrGroup});
+          $scope.onChange({data: data});
         })
       }]
     };
