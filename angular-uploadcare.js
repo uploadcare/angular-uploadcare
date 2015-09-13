@@ -15,8 +15,9 @@ angular.module('ng-uploadcare', [])
         onWidgetReady: '&',
         onUploadComplete: '&',
         onChange: '&',
+        ngModel: '='
       },
-      controller: ['$scope', '$element', '$attrs', '$parse', '$log', function($scope, $element, $attrs, $parse, $log) {
+      controller: ['$scope', '$element', '$attrs', '$log', function($scope, $element, $attrs, $log) {
         if(!uploadcare) {
           $log.error('Uploadcare script has not been loaded!.');
           return;
@@ -27,12 +28,16 @@ angular.module('ng-uploadcare', [])
         $scope.widget.onUploadComplete(function(info) {
           $scope.onUploadComplete({info: info});
         });
-        $scope.widget.onChange(function(file) {
+        $scope.widget.onChange(function(data) {
           // add data binding for hidden inputs
-          $scope.$apply(function () {
-            $parse($attrs.ngModel).assign($scope.$parent, $element.val());
-          });
-          $scope.onChange({file: file});
+          if (data) {
+            data.promise().done(function(info) {
+              $scope.$apply(function () {
+                $scope.ngModel = $element.val()
+              });
+            });
+          }
+          $scope.onChange({data: data});
         })
       }]
     };
