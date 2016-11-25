@@ -52,9 +52,20 @@ This directive supports any of the configuration [options](https://uploadcare.co
 
 Directive is based on attribute instead of element now, so you should just replace `<uploadcare-widget>` with `<input uploadcare-widget>`
 
-#Contribution
-
+# Contributors
 Bring it on! I'll gladly accept PR's that are for the greater good of the module.
+
+* [@homm](https://github.com/homm)
+* [@dmitry-mukhin](https://github.com/dmitry-mukhin)
+* [@Morpho](https://github.com/Morpho)
+* [@evgenyrodionov](https://github.com/evgenyrodionov)
+* [@drakmail](https://github.com/drakmail)
+
+Forked from [@ericthelast](https://github.com/ericthelast)
+by [@homm](https://github.com/homm). Current maintainer — 
+[@Zmoki](https://github.com/Zmoki).
+
+[Full contributors list](https://github.com/uploadcare/angular-uploadcare/contributors).
 
 #License:
 
