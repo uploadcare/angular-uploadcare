@@ -1,0 +1,10 @@
+# git log --format='%aN <%aE>' | sort -u
+
+Alexander <drakmail@gmail.com>
+Alexander Karpinsky <homm86@gmail.com>
+Dmitry Mukhin <dm@uploadcare.com>
+Elijah <ilya@uploadcare.com>
+Eric C. Brown <djheir@gmail.com>
+Eugene Rodionov <github@theaqua.im>
+Kevin Sproles <aspire2x@gmail.com>
+Matthias Scholz <morpho@gmx.de>
