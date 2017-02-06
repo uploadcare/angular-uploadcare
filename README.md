@@ -14,12 +14,25 @@ Combine this with the power of Angular and you've got yourself an image uploadin
 
 *Note: I am in no way affiliated with Uploadcare. I was looking to add better image uploading to an Angular app and found Uploadcare to be one of the best solutions out there. Since there wasn't a directive for Angular, I decided to make one.*
 
+# Install
+
+## npm
+
+```
+npm install angular-uploadcare --save
+```
+
+## Bower
+
+```
+bower install angular-uploadcare
+```
+
 #Usage
 
-* Run `bower install angular-uploadcare` (or manually download/clone and install into your project's directory)
-* Include bower_components/angular-uploadcare/angular-uploadcare.js
-* Include the desired version of the [Uploadcare Widget](https://uploadcare.com/documentation/widget/). This directive works with at least version 2.1.4 `<script charset="utf-8" src="//ucarecdn.com/widget/2.1.4/uploadcare/uploadcare.min.js"></script>`. If you want use version with jQuery, include `uploadcare.full.min.js` instead of `uploadcare.min.js`. There is a [bower](https://github.com/uploadcare/uploadcare-bower) for this.
-* Add `ng-uploadcare` as a dependency for your app
+* Install [Uploadcare Widget](https://uploadcare.com/documentation/widget/) and add to your page or bundle.
+* Add `angular-uploadcare.js` to your page or bundle.
+* Add `ng-uploadcare` as a dependency for your app.
 * Insert the `uploadcare-widget` directive into your template file:
 ```
 <input
