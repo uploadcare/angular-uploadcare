@@ -1,0 +1,21 @@
+{
+  "name": "angular-uploadcare",
+  "version": "0.2.1",
+  "description": "Provides a directive for the Uploadcare widget",
+  "main": "angular-uploadcare.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uploadcare/angular-uploadcare.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/uploadcare/angular-uploadcare/issues"
+  },
+  "homepage": "https://github.com/uploadcare/angular-uploadcare#readme"
+}
