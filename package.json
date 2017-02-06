@@ -12,7 +12,10 @@
     "type": "git",
     "url": "git+https://github.com/uploadcare/angular-uploadcare.git"
   },
-  "author": "",
+  "author": {
+    "name": "Uploadcare and other contributors",
+    "email": "hello@uploadcare.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/uploadcare/angular-uploadcare/issues"
