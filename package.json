@@ -17,5 +17,15 @@
   "bugs": {
     "url": "https://github.com/uploadcare/angular-uploadcare/issues"
   },
-  "homepage": "https://github.com/uploadcare/angular-uploadcare#readme"
+  "homepage": "https://github.com/uploadcare/angular-uploadcare#readme",
+  "keywords": [
+    "angular",
+    "uploadcare",
+    "directive",
+    "upload",
+    "file",
+    "image",
+    "cdn",
+    "media"
+  ]
 }
