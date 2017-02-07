@@ -1,44 +1,55 @@
-'use strict';
+(function(root, factory) {
+  'use strict';
+  if (typeof define === 'function' && define.amd) {
+    define(['angular'], factory);
+  } else if (typeof module === 'object' && module.exports) {
+    module.exports = factory(require('angular'));
+  } else {
+    factory(root.angular);
+  }
+}(this, function(angular) {
+  'use strict';
 
-/**
- * @ngdoc directive
- * @name angular-uploadcare.directive:Uploadcare
- * @description Provides a directive for the Uploadcare widget.
- * # Uploadcare
- */
-angular.module('ng-uploadcare', [])
-  .directive('uploadcareWidget', function () {
-    return {
-      restrict: 'A',
-      require: 'ngModel',
-      scope: {
-        onWidgetReady: '&',
-        onUploadComplete: '&',
-        onChange: '&',
-        ngModel: '='
-      },
-      controller: ['$scope', '$element', '$attrs', '$log', function($scope, $element, $attrs, $log) {
-        if(!uploadcare) {
-          $log.error('Uploadcare script has not been loaded!.');
-          return;
-        }
-        $element.attr('type', 'hidden');
-        $scope.widget = uploadcare.Widget($element);
-        $scope.onWidgetReady({widget: $scope.widget});
-        $scope.widget.onUploadComplete(function(info) {
-          $scope.onUploadComplete({info: info});
-        });
-        $scope.widget.onChange(function(data) {
-          // add data binding for hidden inputs
-          if (data) {
-            data.promise().done(function(info) {
-              $scope.$apply(function () {
-                $scope.ngModel = $element.val()
-              });
-            });
+  /**
+   * @ngdoc directive
+   * @name angular-uploadcare.directive:Uploadcare
+   * @description Provides a directive for the Uploadcare widget.
+   * # Uploadcare
+   */
+  angular.module('ng-uploadcare', [])
+    .directive('uploadcareWidget', function() {
+      return {
+        restrict: 'A',
+        require: 'ngModel',
+        scope: {
+          onWidgetReady: '&',
+          onUploadComplete: '&',
+          onChange: '&',
+          ngModel: '='
+        },
+        controller: ['$scope', '$element', '$attrs', '$log', function($scope, $element, $attrs, $log) {
+          if (!uploadcare) {
+            $log.error('Uploadcare script has not been loaded!.');
+            return;
           }
-          $scope.onChange({data: data});
-        })
-      }]
-    };
-  });
+          $element.attr('type', 'hidden');
+          $scope.widget = uploadcare.Widget($element);
+          $scope.onWidgetReady({widget: $scope.widget});
+          $scope.widget.onUploadComplete(function(info) {
+            $scope.onUploadComplete({info: info});
+          });
+          $scope.widget.onChange(function(data) {
+            // add data binding for hidden inputs
+            if (data) {
+              data.promise().done(function(info) {
+                $scope.$apply(function() {
+                  $scope.ngModel = $element.val()
+                });
+              });
+            }
+            $scope.onChange({data: data});
+          })
+        }]
+      };
+    });
+}));
