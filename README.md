@@ -30,7 +30,7 @@ bower install angular-uploadcare
 
 #Usage
 
-* Install [Uploadcare Widget](https://uploadcare.com/documentation/widget/) and add to your page or bundle.
+* Install [Uploadcare Widget](https://uploadcare.com/documentation/widget/) and add it to your page or bundle.
 * Add `angular-uploadcare.js` to your page or bundle.
 * Add `ng-uploadcare` as a dependency for your app.
 * Insert the `uploadcare-widget` directive into your template file:
