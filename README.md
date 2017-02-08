@@ -16,12 +16,6 @@ Combine this with the power of Angular and you've got yourself an image uploadin
 
 # Install
 
-## npm
-
-```
-npm install angular-uploadcare --save
-```
-
 ## Bower
 
 ```
