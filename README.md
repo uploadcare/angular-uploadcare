@@ -1,6 +1,8 @@
 angular-uploadcare
 ==================
 
+[![Build Status](https://travis-ci.org/uploadcare/angular-uploadcare.svg?branch=master)](https://travis-ci.org/uploadcare/angular-uploadcare)
+
 Provides a directive for the [Uploadcare Widget](https://uploadcare.com/documentation/widget/).
 
 Looking for a dead-simple way to integrate image uploading/cropping with your [Angularjs](http://angularjs.org) project? Then look no further! [Uploadcare](https://uploadcare.com) provides a fantastic widget for uploading images from multiple sources.  From their site:
