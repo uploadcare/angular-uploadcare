@@ -4,9 +4,17 @@
   "description": "Provides a directive for the Uploadcare widget",
   "main": "angular-uploadcare.js",
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "angular": "^1.6.1",
+    "angular-mocks": "^1.6.2",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.4.1",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "^1.1.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "karma start karma.config.js --single-run",
+    "test:watch": "karma start karma.config.js"
   },
   "repository": {
     "type": "git",
