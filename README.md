@@ -24,7 +24,7 @@ Combine this with the power of Angular and you've got yourself an image uploadin
 bower install angular-uploadcare
 ```
 
-#Usage
+# Usage
 
 * Install [Uploadcare Widget](https://uploadcare.com/documentation/widget/) and add it to your page or bundle.
 * Add `angular-uploadcare.js` to your page or bundle.
@@ -47,7 +47,7 @@ bower install angular-uploadcare
  />
  ```
 
-#Options
+# Options
 
 This directive supports any of the configuration [options](https://uploadcare.com/documentation/widget/#configuration) defined by Uploadcare. In addition, it also supports the following options:
 
@@ -61,10 +61,10 @@ This directive supports any of the configuration [options](https://uploadcare.co
 
 Directive is based on attribute instead of element now, so you should just replace `<uploadcare-widget>` with `<input uploadcare-widget>`
 
-#Contribution
+# Contribution
 
 Bring it on! I'll gladly accept PR's that are for the greater good of the module.
 
-#License:
+# License:
 
 MIT Baby!
